@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Previsão do tempo</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Phosphor icons ( commented out ) -->
+
+    <link rel="stylesheet" href="./stylesTEMPO/global.css">
+</head>
+<body>
+    <span class="background">
+        <img src="./icons/background.jpg" alt="background" class="background">
+    </span>
+    <div class="card"> 
+        <!--  form do tempo  -->
+        <form>
+            <!-- input e barra de pesquisa -->
+            <div>
+                <i class="ph ph-map-pin"></i>
+                <input type="text" name="local" placeholder="Indique o nome do local">
+            </div>
+            <button type="submit">
+                <img src="./icons/pesquisa.png" alt="" width="40px" height="25px">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+        </form>
+        <main>
+            <!-- icone de tempo, temperatura, e cidade -->
+            <img id="icon-weather" src="./icons/snow.png" alt="">
+            <h1 id="temperatura">-2°C</h1>
+            <h2 id="Cidade">Lisboa</h2>
+        </main>
+        <footer>
+            <!-- informaão de humidade e vento  -->
+            <div class="block">
+                <i class="ph ph-drop-half-bottom"></i>
+                <div>
+                    <p>Humidade</p>
+                    <img src="./icons/humidity.png" alt="" width="50px" height="60px" class="iconTEMP">
+                    <strong id="humidade">78%</strong>
+                </div>
+            </div>
+            <div class="block">
+                <i class="ph ph-wind"></i>
+                <div>
+                    <p>Vel. Vento</p>
+                    <img src="./icons/wind.png" alt="" width="50px" height="60px" class="iconTEMP">
+                    <strong id="vento">8km/h</strong>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./TEMPO.js"></script>
+</body>
+</html>

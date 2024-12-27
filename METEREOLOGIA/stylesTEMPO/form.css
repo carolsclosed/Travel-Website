@@ -1,0 +1,50 @@
+/* Estiliza o <form> */
+form {
+    display: flex; /* Define um layout flexível para organizar os elementos filhos em uma linha */
+    align-items: center; /* Alinha os elementos filhos ao centro verticalmente */
+    column-gap: 20px; /* Define um espaçamento de 20px entre as colunas */
+}
+
+/* Estiliza os elementos <i> e <button> dentro do <form> */
+form i, form button {
+    font-size: 22px; /* Define o tamanho da fonte para 22px */
+}
+
+/* Estiliza o elemento <div> dentro do <form> */
+form div {
+    flex: 1; /* Permite que o <div> cresça para ocupar o espaço disponível */
+    display: flex; /* Define um layout flexível para o <div> */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    column-gap: 8px; /* Define um espaçamento de 8px entre as colunas */
+    padding: 8px; /* Define um preenchimento interno de 8px */
+    border-radius: 8px; /* Arredonda os cantos com um raio de 8px */
+    border: 1px solid var(--border); /* Define uma borda de 1px sólida usando a variável CSS 'var(--border)' */
+}
+
+/* Estiliza o elemento <input> dentro do <div> que está dentro do <form> */
+form div input {
+    background: transparent; /* Define o fundo como transparente */
+    border: 0; /* Remove a borda */
+    outline: 0; /* Remove o contorno */
+    width: 100%; /* Define a largura como 100% do elemento pai */
+    font-size: 18px; /* Define o tamanho da fonte para 18px */
+    letter-spacing: 0.5px; /* Define o espaçamento entre as letras para 0.5px */
+}
+
+/* Estiliza o texto placeholder dentro do <input> */
+form div ::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Define a cor do placeholder com 70% de opacidade */
+}
+
+/* Estiliza o elemento <button> dentro do <form> */
+form button {
+    width: 45px; /* Define a largura do botão para 45px */
+    height: 45px; /* Define a altura do botão para 45px */
+    background: transparent; /* Define o fundo como transparente */
+    border-radius: 8px; /* Arredonda os cantos com um raio de 8px */
+    border: 1px solid var(--border); /* Define uma borda de 1px sólida usando a variável CSS 'var(--border)' */
+    display: flex; /* Define um layout flexível para o botão */
+    align-items: center; /* Alinha o conteúdo ao centro verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    cursor: pointer; /* Muda o cursor para um ponteiro(rato ao selecionar) ao passar o mouse sobre o botão */
+}

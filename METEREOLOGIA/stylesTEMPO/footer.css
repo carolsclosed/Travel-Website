@@ -1,0 +1,33 @@
+/* Estiliza o footer */
+footer {
+    display: flex; /* Define um layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo ao centro verticalmente */
+    column-gap: 32px; /* Define um espaçamento de 32px entre as colunas */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estiliza um elemento com a classe 'block' */
+.block {
+    display: flex; /* Define um layout flexível */
+    align-items: flex-end; /* Alinha o conteúdo ao final do eixo vertical */
+    column-gap: 8px; /* Define um espaçamento de 8px entre as colunas */
+}
+
+/* Estiliza o elemento <i> dentro de um elemento com a classe 'block' */
+.block i {
+    font-size: 54px; /* Define o tamanho da fonte para 54px */
+}
+
+/* Estiliza o elemento <div> dentro de um elemento com a classe 'block' */
+.block div {
+    display: flex; /* Define um layout flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+}
+
+/* Estiliza o elemento <strong> dentro de um <div> que está dentro de um elemento com a classe 'block' */
+.block div strong {
+    font-size: 28px; /* Define o tamanho da fonte para 28px */
+    line-height: 0.6px; /* Define a altura da linha para 0.6px */
+    margin-left: -26%; /* Move o elemento 26% para a esquerda */
+}

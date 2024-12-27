@@ -1,0 +1,75 @@
+/* Define a cor de fundo da página */
+body {
+    background-color: rgb(250, 239, 251);
+}
+
+/* Estiliza o h1 dentro do header */
+header h1 {
+    font-size: 35px; /* Define o tamanho da fonte para 35px */
+    letter-spacing: 1px; /* Define o espaçamento entre as letras para 1px */
+    color: #5b4364; /* Define a cor do texto */
+    text-decoration: none; /* Remove qualquer decoração de texto, como sublinhado por exemplo */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estiliza a secção 'sobrenos' */
+.sobrenos {
+    padding: 50px 10px; /* Define o preenchimento interno superior/inferior de 50px e esquerdo/direito de 10px */
+    border-radius: 4px; /* Arredonda os cantos com um raio de 4px */
+    transition: all 1s ease 0s; /* Define uma transição suave para todas as propriedades, que dura 1 segundo */
+    cursor: pointer; /* Muda o cursor para um ponteiro(rato de selecionar) ao passar o mouse sobre o elemento */
+    min-width: 700px; /* Define a largura mínima de 700px */
+}
+
+/* Estiliza as imagens dentro de um elemento com a classe 'container-img' */
+.container-img img {
+    padding: 15px; /* Define o preenchimento interno de 15px */
+    border: 1px solid #880fa7; /* Define uma borda de 1px sólida com a cor #880fa7 */
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%); /* Adiciona uma sombra à caixa com deslocamento horizontal de 5px, vertical de 10px, desfoque de 30px e cor com opacidade de 20% */
+    border-radius: 4px; /* Arredonda os cantos com um raio de 4px */
+    margin-bottom: 15px; /* Adiciona uma margem inferior de 15px */
+    cursor: pointer; /* Muda o cursor para um ponteiro(rato de selecionar) ao passar o mouse sobre o elemento */
+}
+
+/* Estiliza um elemento com a classe 'row-items' */
+.row-items {
+    display: grid; /* Define um layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto)); /* Cria colunas ajustáveis automaticamente com largura mínima de 200px */
+    grid-gap: 2rem; /* Define um espaçamento de 2rem entre os itens da grid */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    text-align: center; /* Centraliza o texto dentro dos itens */
+    background-color: #d9bce2; /* Define a cor de fundo */
+    padding: 15px; /* Define o preenchimento interno de 15px */
+    border: 1px solid #880fa7; /* Define uma borda de 1px sólida com a cor #880fa7 */
+}
+
+/* Estiliza um elemento com a classe 'text' */
+.text {
+    background-color: #b58dc1; /* Define a cor de fundo */
+    margin-right: 10%; /* Define a margem direita de 10% */
+    margin-left: 10%; /* Define a margem esquerda de 10% */
+    border-radius: 20%; /* Arredonda os cantos com um raio de 20% */
+    padding: 5px; /* Define o preenchimento interno de 5px */
+    text-align: center; /* Centraliza o texto */
+    color: antiquewhite; /* Define a cor do texto */
+    text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
+    border: 1px solid #880fa7; /* Define uma borda de 1px sólida com a cor #880fa7 */
+}
+
+/* Regras de mídia para ecrãs com a largura máxima de 750px */
+@media(max-width: 750px) {
+    .sobrenos {
+        display: flex; /* Define um layout flexível */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 0%; /* Remove o preenchimento interno */
+    }
+}
+
+/* Regras de mídia para ecrãs com largura máxima de 575px */
+@media(max-width: 575px) {
+    .sobrenos {
+        min-width: auto; /* Remove a largura mínima */
+        width: 100%; /* Define a largura como 100% */
+        margin: 0 auto; /* Centraliza o elemento horizontalmente */
+    }
+}

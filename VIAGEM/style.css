@@ -1,0 +1,578 @@
+
+/* Estilos globais */
+* {
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo do tamanho total dos elementos */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define as fontes padrão */
+    text-decoration: none; /* Remove a decoração padrão de texto */
+    list-style: none; /* Remove o estilo padrão de listas */
+    scroll-behavior: smooth; /* Define um comportamento suave para o "scroll" */
+}
+
+/* Definição de variáveis CSS globais */
+:root {
+    --bg-color: #fff; /* Cor de fundo */
+    --text-color: #221314; /* Cor do texto principal */
+    --second-color: #5a7184; /* Cor secundária */
+    --main-color: #6e54fa; /* Cor principal */
+    --big-font: 6rem; /* Tamanho de fonte grande */
+    --h2-font: 3rem; /* Tamanho de fonte para os h2 */
+    --p-font: 1.1rem; /* Tamanho de fonte para parágrafos */
+}
+
+/* Estilos para o body */
+body {
+    background: var(--bg-color); /* Define a cor de fundo */
+    color: var(--text-color); /* Define a cor do texto */
+}
+
+/* Estilos para o header */
+header {
+    position: fixed; /* Fixa o header na parte superior da página */
+    top: 0; /* Alinha o header no topo */
+    right: 0; /* Alinha o header à direita */
+    width: 100%; /* Define a largura como 100% */
+    z-index: 1000; /* Define a ordem de sobreposição */
+    display: flex; /* Usa layout flexível */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    justify-content: space-between; /* Espaça os elementos igualmente */
+    background: transparent; /* Fundo transparente */
+    padding: 30px 18%; /* Preenchimento interno */
+    transition: ease .40s; /* Transição suave */
+}
+
+/* Estilos para o logótipo */
+.logo {
+    font-size: 35px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    letter-spacing: 1px; /* Espaçamento entre letras de 1px*/
+    color: #5b4364; /* Cor do texto */
+}
+
+/* Estilos para a navbar */
+.navbar {
+    display: flex; /* Usa layout flexível */
+}
+
+/*estilo para a tag <a> dentro da navbar*/
+.navbar a {
+    color: #5b4364; /* Cor do texto */
+    font-size: var(--p-font); /* Tamanho da fonte */
+    font-weight: 500; /* 'Peso' da fonte */
+    padding: 10px 12px; /* Preenchimento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: ease .40s; /* Transição suave */
+}
+/*estilo para a tag <a> dentro da navbar quando o mouse está em cima*/
+.navbar a:hover {
+    background: var(--bg-color); /* Cor de fundo ao passar o mouse */
+    color: var(--text-color); /* Cor do texto ao passar o mouse */
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%); /* Sombra ao passar o mouse */
+    border-radius: 20%; /* Bordas arredondadas ao passar o mouse */
+}
+
+/* Estilos para o ícone do menu */
+#menu-icon {
+    color: var(--bg-color); /* Cor do ícone */
+    font-size: 35px; /* Tamanho do ícone */
+    z-index: 10001; /* Ordem de empilhamento */
+    cursor: pointer; /* Cursor de ponteiro */
+    display: none; /* Oculta o ícone por padrão */
+}
+
+/* Estilos para as secções */
+section {
+    padding: 80px 18%; /* Preenchimento interno */
+}
+
+/* Estilos para a secção 'home' */
+.home {
+    position: relative; /* Posição relativa */
+    width: 100%; /* Largura total */
+    height: 100vh; /* Altura da janela de visualização */
+    background: url("/SITE VIAGENS/imgs/INICIO.jpg"); /* Imagem de fundo */
+    background-size: cover; /* Tamanho de fundo para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    display: grid; /* Usa layout de grid */
+    grid-template-columns: repeat(1, 1fr); /* Uma coluna */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+}
+
+/* Estilos para o texto na secção 'home' */
+.home-text h1 {
+    font-size: var(--big-font); /* Tamanho da fonte */
+    line-height: 1.2; /* Altura da linha de 1.2*/
+    color: #530d47; /* Cor do texto */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Família de fontes*/
+    letter-spacing: 4px; /* Espaçamento entre letras de 4px */
+    margin-bottom: 20px; /* Margem inferior de 20px*/
+}
+
+.home-text p {
+    color: #ffffffbf; /* Cor do texto */
+    font-size: 20px; /* Tamanho da fonte de 20px*/
+    font-weight: 400; /* 'Peso' da fonte de 400*/
+    line-height: 38px; /* Altura da linha  de 38px*/
+    margin-bottom: 50px; /* Margem inferior de 50 px */
+}
+
+/* Estilos para o botão na secção 'home' */
+.home-btn {
+    display: inline-block; /* Exibe como bloco inline */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 15px 30px; /* Preenchimento interno */
+    background: #ffffffbf; /* Cor de fundo */
+    color: var(--main-color); /* Cor do texto */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: ease .40s; /* Transição suave */
+}
+
+.home-btn:hover {
+    background: var(--bg-color); /* Cor de fundo ao passar o mouse por cima */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse por cima */
+}
+
+/* Estilos para quando o header é 'sticky' */
+header.sticky {
+    background: var(--bg-color); /* Cor de fundo */
+    padding: 10px 18%; /* Preenchimento interno */
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; /* Sombra */
+}
+
+.sticky .logo {
+    color: var(--text-color); /* Cor do texto */
+}
+
+.sticky .navbar a {
+    color: var(--text-color); /* Cor do texto */
+}
+
+/* Estilos para o h2 em .text*/
+.text h2 {
+    text-align: center; /* Centraliza o texto */
+    font-size: var(--h2-font); /* Tamanho da fonte */
+    line-height: 1.1; /* Altura da linha */
+}
+
+/* Estilos para .row-items */
+.row-items {
+    display: grid; /* Usa layout de grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto)); /* Colunas automáticas */
+    grid-gap: 2rem; /* Espaçamento entre colunas */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 5rem; /* Margem superior */
+}
+
+/* Estilos para a caixa de container-box */
+.container-box {
+    background: var(--bg-color); /* Cor de fundo */
+    border: 1px solid #f0eded; /* Borda */
+    padding: 50px 10px; /* Preenchimento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: all 1s ease 0s; /* Transição suave */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Estilos para a imagem dentro do container-img */
+.container-img img {
+    height: 85px; /* Altura da imagem */
+    width: 85px; /* Largura da imagem */
+    padding: 15px; /* Preenchimento interno */
+    background: var(--bg-color); /* Cor de fundo */
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%); /* Sombra */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Margem inferior */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Estilos para o h4 na contauner-box */
+.container-box h4 {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    margin-bottom: 8px; /* Margem inferior */
+}
+
+/* Estilos para os p's na container-box */
+.container-box p {
+    font-size: 15px; /* Tamanho da fonte */
+    color: var(--second-color); /* Cor do texto */
+}
+
+/* Estilos para a container-box ao passar o mouse por cima */
+.container-box:hover {
+    box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); /* Sombra */
+    border: 1px solid transparent; /* Borda transparente */
+    transform: translateY(-3px); /* Translação vertical */
+}
+
+/* Estilos para o título */
+.title {
+    text-align: center; /* Centraliza o texto */
+}
+
+.title h2 {
+    font-size: var(--h2-font); /* Tamanho da fonte */
+    line-height: 1.2; /* Altura da linha */
+}
+
+/* Estilos para o package-content*/
+.package-content {
+    display: grid; /* Usa layout de grade */
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto)); /* Colunas automáticas */
+    grid-gap: 2rem; /* Espaçamento entre colunas */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 5rem; /* Margem superior */
+}
+
+/* Estilos para o thum */
+.thum {
+    position: relative; /* Posição relativa */
+    transition: all .3s cubic-bezier(.445, .05, .55, .95); /* Transição suave */
+    will-change: filter; /* Indica que o filtro será alterado */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.thum img {
+    width: 100%; /* Largura total */
+    height: 300px; /* Altura fixa */
+    border-radius: 10%; /* Bordas arredondadas */
+}
+
+/* Estilos para o h3 do thum */
+.thum h3 {
+    position: absolute; /* Posição absoluta */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    text-align: right; /* Alinha o texto à direita */
+    color: #696162; /* Cor do texto */
+    top: 36px; /* Alinha ao topo */
+    right: 40px; /* Alinha à direita */
+}
+
+/* Estilos para o dest-content */
+.dest-content {
+    display: flex; /* Usa layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    justify-content: space-between; /* Espaça itens igualmente */
+    padding-top: 24px; /* Preenchimento superior */
+}
+
+/* Estilos para as estrelas */
+.stars {
+    margin-bottom: 8px; /* Margem inferior */
+}
+
+/* Estilos para o h4 em location */
+.location h4 {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    margin-bottom: 8px; /* Margem inferior */
+}
+/* Estilos para o p em location */
+.location p {
+    font-size: 15px; /* Tamanho da fonte */
+    color: var(--second-color); /* Cor do texto */
+}
+
+/* Estilos para o thum ao passar o mouse por cima */
+.thum:hover {
+    filter: brightness(100%) hue-rotate(45deg); /* Filtro de brilho e rotação de matiz */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+/* Estilos para o conteúdo da Destination-content */
+.Destination-content {
+    display: grid; /* Usa layout de grade */
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)); /* Colunas automáticas */
+    grid-gap: 2rem; /* Espaçamento entre colunas */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    margin-top: 5rem; /* Margem superior */
+}
+
+/* Estilos para a col-content */
+.col-content {
+    position: relative; /* Posição relativa */
+}
+/* Estilos para img em col-content */
+.col-content img {
+    width: 100%; /* Largura total */
+    height: 500px; /* Altura fixa */
+    object-fit: cover; /* Ajusta a imagem para cobrir totalmente */
+    border-radius: 15px; /* Bordas arredondadas */
+    filter: brightness(80%); /* Filtro de brilho */
+    transition: all .3s cubic-bezier(0.495, 0.05, 0.55, 0.95); /* Transição suave */
+    will-change: filter; /* Indica que o filtro será alterado */
+}
+
+/* Estilos para o h5 em col-content  */
+.col-content h5 {
+    position: absolute; /* Posição absoluta */
+    font-size: 22px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    color: var(--bg-color); /* Cor do texto */
+    left: 15px; /* Alinha à esquerda */
+    bottom: 60px; /* Alinha à parte inferior */
+}
+/* Estilos para o p em col-content  */
+
+.col-content p {
+    position: absolute; /* Posição absoluta */
+    font-size: 22px; /* Tamanho da fonte */
+    color: var(--bg-color); /* Cor do texto */
+    left: 15px; /* Alinha à esquerda */
+    bottom: 30px; /* Alinha à parte inferior */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Estilos para a imagem na col-content ao passar o mouse por cima*/
+.col-content img:hover {
+    filter: brightness(100%) hue-rotate(45deg); /* Filtro de brilho e rotação de matiz */
+    transform: scale(1.1); /* Aumenta o tamanho */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Estilos para a newsletter */
+.newsletter {
+    display: flex; /* Usa layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    align-items: center; /* Alinha elementos ao centro verticalmente */
+    justify-content: space-between; /* Espaça elementos igualmente */
+    grid-gap: 3rem; /* Espaçamento entre colunas */
+}
+
+/* Estilos para o h2 na newsletter */
+.news-text h2 {
+    font-size: var(--h2-font); /* Tamanho da fonte */
+    margin-bottom: 5px; /* Margem inferior */
+}
+/* Estilos para o p na newsletter */
+
+.news-text p {
+    font-size: var(--p-font); /* Tamanho da fonte */
+    color: var(--second-color); /* Cor do texto */
+    line-height: 30px; /* Altura da linha */
+}
+
+/* Estilos para o form na newsletter */
+.newsletter form {
+    max-width: 100%; /* Largura máxima */
+    width: 450px; /* Largura fixa */
+    position: relative; /* Posição relativa */
+}
+
+/* Estilos para o primeiro input no form */
+.newsletter form input:first-child {
+    display: inline-block; /* Exibe como bloco em linha */
+    width: 100%; /* Largura total */
+    padding: 20px 150px 20px 30px; /* Preenchimento interno */
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%); /* Sombra */
+    outline: none; /* Remove contorno */
+    border: none; /* Remove borda */
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+/* Estilos para o último campo de entrada no formulário */
+.newsletter form input:last-child {
+    display: inline-block; /* Exibe como bloco em linha */
+    position: absolute; /* Posição absoluta */
+    outline: none; /* Remove contorno */
+    border: none; /* Remove borda */
+    padding: 14px 30px; /* Preenchimento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    background: var(--main-color); /* Cor de fundo */
+    color: var(--bg-color); /* Cor do texto */
+    top: 6px; /* Alinha ao topo */
+    right: 6px; /* Alinha à direita */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Estilos para contact */
+#contact {
+    background: var(--main-color); /* Cor de fundo */
+}
+
+/* Estilos principais */
+.main {
+    display: flex; /* Usa layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+}
+
+/* Estilos para o rodapé */
+.footer {
+    padding: 20px 0; /* Preenchimento superior e inferior */
+}
+
+/* Estilos para a list*/
+.list {
+    width: 25%; /* Largura de 25% */
+}
+/* Estilos para o h4 na list */
+
+.list h4 {
+    font-size: 21px; /* Tamanho da fonte */
+    color: var(--bg-color); /* Cor do texto */
+    margin-bottom: 30px; /* Margem inferior */
+    position: relative; /* Posição relativa */
+}
+
+/* Estilos para o antes do h4 da lista */
+.list h4::before {
+    content: ""; /* Conteúdo vazio */
+    position: absolute; /* Posição absoluta */
+    height: 2px; /* Altura da linha */
+    width: 60px; /* Largura da linha */
+    left: 0; /* Alinha à esquerda */
+    bottom: -10px; /* Alinha à parte inferior */
+    background: var(--bg-color); /* Cor de fundo */
+}
+
+/* Estilos para os itens da lista excepto o último */
+.list ul li:not(:last-child) {
+    margin-bottom: 16px; /* Margem inferior */
+}
+
+/* Estilos para os a na li que está na ul que está na list */
+.list ul li a {
+    color: #ffffffbf; /* Cor do texto */
+    font-size: var(--p-font); /* Tamanho da fonte */
+    display: block; /* Exibe como bloco */
+    transition: .3s; /* Transição suave */
+}
+/* Estilos para os a na li que está na ul que está na list quando o rato passa por cima*/
+.list ul li a:hover {
+    color: var(--bg-color); /* Cor do texto ao passar o mouse */
+    transform: translateX(14px); /*Translação do texto à direita */
+}
+
+/* Estilos para os ícones da redes sociais */
+.list .social a {
+    height: 40px; /* Altura fixa */
+    width: 40px; /* Largura fixa */
+    background: var(--main-color); /* Cor de fundo */
+    display: inline-flex; /* Exibe como bloco flexível inline */
+    align-items: center; /* Alinha elementos ao centro verticalmente */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    font-size: 21px; /* Tamanho da fonte */
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: .3s; /* Transição suave */
+    margin-right: 16px; /* Margem à direita */
+}
+
+.list .social a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Media query para ecrãs menores que 1400px */
+@media(max-width: 1400px) {
+    header {
+        padding: 17px 3%; /* Preenchimento interno */
+        transition: .2s; /* Transição suave */
+    }
+
+    header.sticky {
+        padding: 10px 3%; /* Preenchimento interno */
+        transition: .2s; /* Transição suave */
+    }
+
+    section {
+        padding: 80px 3%; /* Preenchimento interno */
+        transition: .2s; /* Transição suave */
+    }
+
+    :root {
+        --big-font: 4.5rem; /* Tamanho da fonte grande */
+        --h2-font: 2.3rem; /* Tamanho da fonte do título */
+        --p-font: 1rem; /* Tamanho da fonte do parágrafo */
+        transition: .2s; /* Transição suave */
+    }
+}
+
+/* Media query para ecrãs menores que 1040px */
+@media(max-width: 1040px) {
+    #menu-icon {
+        display: block; /* mostra o ícone do menu */
+    }
+
+    .navbar {
+        position: absolute; /* Posição absoluta */
+        top: 0; /* Alinha ao topo */
+        right: -100%; /* Fora da tela à direita */
+        width: 270px; /* Largura fixa */
+        height: 129vh; /* Altura maior que a tela */
+        background: #daa9fd; /* Cor de fundo */
+        display: flex; /* Usa layout flexível */
+        flex-direction: column; /* Colunas verticais */
+        align-items: center; /* Alinha elementos ao centro */
+        padding: 150px 30px; /* Preenchimento interno */
+        transition: 0.5s all; /* Transição suave */
+    }
+
+    .home {
+        height: 88vh; /* Altura fixa */
+    }
+
+    .navbar a {
+        display: block; /* Exibe como bloco */
+        margin: 1.2rem 0; /* Margens vertical */
+    }
+
+    .sticky .navbar a {
+        color: var(--bg-color); /* Cor do texto */
+    }
+
+    .navbar a:hover {
+        color: var(--text-color); /* Cor do texto ao passar o mouse */
+    }
+
+    .open {
+        right: 0; /* Alinha à direita */
+    }
+
+    .list {
+        width: 50%; /* Largura de 50% */
+        margin-bottom: 12px; /* Margem inferior */
+    }
+}
+
+/* Media query para ecrãs menores que 575px */
+@media(max-width: 575px) {
+    .list {
+        width: 100%; /* Largura total */
+    }
+
+    .container {
+        width: 75%; /* Largura de 75% */
+    }
+
+    .container-box {
+        text-align: center; /* Centraliza o texto */
+        margin-left: 100px; /* Margem à esquerda */
+    }
+
+    .text h2 {
+        margin-left: 100px; /* Margem à esquerda */
+    }
+
+    .home {
+        height: 85vh; /* Altura fixa */
+        transition: .2s; /* Transição suave */
+    }
+
+    .newsletter form {
+        width: 350px; /* Largura fixa */
+    }
+
+    :root {
+        --big-font: 3.8rem; /* Tamanho da fonte grande */
+        --h2-font: 1.8rem; /* Tamanho da fonte do título */
+        transition: .2s; /* Transição suave */
+    }
+
+    .text {
+        text-align: center; /* Centraliza o texto */
+    }
+}

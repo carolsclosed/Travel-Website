@@ -1,0 +1,25 @@
+/* Estiliza o <main> */
+main {
+    margin-top: 8px; /* Adiciona uma margem superior de 8px */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  /* Estiliza o elemento com o ID 'icon-weather' */
+  #icon-weather {
+    width: 225px; /* Define a largura como 225px */
+    height: auto; /* Define a altura automática para manter a proporção da imagem */
+  }
+  
+  /* Estiliza o elemento com o ID 'temperatura' */
+  #temperatura {
+    font-size: 100px; /* Define o tamanho da fonte para 100px */
+    letter-spacing: 0.8px; /* Define o espaçamento entre as letras para 0.8px */
+    margin-top: 8px; /* Adiciona uma margem superior de 8px */
+  }
+  
+  /* Estiliza o elemento com o ID 'local' */
+  #local {
+    font-size: 36px; /* Define o tamanho da fonte para 36px */
+    line-height: 1; /* Define a altura da linha para 1, que é igual ao tamanho da fonte */
+  }
+  

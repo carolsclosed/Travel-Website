@@ -1,0 +1,71 @@
+/* Importa os arquivos CSS externos */
+@import url("./form.css");
+@import url("./main.css");
+@import url("./footer.css");
+
+/* Define estilos para todos os elementos */
+* {
+  padding: 0; /* Remove o preenchimento padrão */
+  margin: 0; /* Remove a margem padrão */
+  box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo do tamanho total dos elementos */
+}
+
+/* Estiliza elementos com a classe 'iconTEMP' */
+.iconTEMP {
+  padding: 10%; /* Define um preenchimento interno de 10% */
+  padding-bottom: 25%; /* Define um preenchimento interno inferior de 25% */
+}
+
+/* Define variáveis CSS globais */
+:root {
+  --border: rgba(255, 255, 255, 0.5); /* Define a variável 'border' com uma cor branca semitransparente */
+}
+
+/* Estiliza os elementos body, button, a e input */
+body, button, a, input {
+  color: #fff; /* Define a cor do texto como branco */
+  font: 400 1rem "Poppins", sans-serif; /* Define a fonte como Poppins, peso 400 e tamanho 1rem */
+} 
+
+/* Estiliza o elemento body */
+body { 
+  width: 100%; /* Define a largura como 100% */
+  height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+  display: flex; /* Define um layout flexível */
+  background: #333; /* Define a cor de fundo como cinza escuro (#333) */
+}
+
+/* Estiliza a imagem de fundo  */
+.background {
+  position: fixed; /* Define a posição fixa */
+  inset: 0; /* Define a posição para preencher toda a tela */
+  background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir toda a área */
+  width: 100%;/* Define a largura como 100% */
+  height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+}
+
+
+
+/* Estiliza elementos com a classe 'card' */
+.card {
+  width: 500px; /* Define a largura como 500px */
+  height: auto; /* Define a altura automática */
+  margin: auto; /* Centraliza a margem */
+  padding: 32px 32px 40px; /* Define o preenchimento interno superior e inferior de 32px e inferior de 40px */
+  display: flex; /* Define um layout flexível */
+  flex-direction: column; /* Organiza os itens em uma coluna */
+  row-gap: 24px; /* Define um espaçamento de 24px entre as linhas */
+  border: 1px solid var(--border); /* Define uma borda de 1px sólida usando a variável 'border' */
+  border-radius: 12px; /* Arredonda os cantos com um raio de 12px */
+  z-index: 1; /* Define a ordem de camada como 1 */
+  background: rgba(255, 255, 255, 0.1); /* Define o fundo com uma cor branca semitransparente */
+  backdrop-filter: blur(20px); /* Aplica um desfoque de 20px ao fundo */
+}
+
+/* Estiliza os elementos com os IDs 'humidade', 'vento' e 'temperatura' */
+#humidade, #vento, #temperatura {
+  font-weight: 500; /* Define o peso da fonte como 500 */
+  font-family: "Bebas Neue", sans-serif; /* Define a fonte como Bebas Neue */
+}
